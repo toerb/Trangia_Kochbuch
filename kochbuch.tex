@@ -1,76 +1,8 @@
-\documentclass[%
-a4paper,
-%twoside,
-11pt
-]{article}
-
-% encoding, font, language
-\usepackage[T1]{fontenc}
-\usepackage[latin1]{inputenc}
-\usepackage{lmodern}
-\usepackage[ngerman, english]{babel}
-
-\usepackage{nicefrac}
-
-\usepackage[
-    %handwritten,
-    nowarnings,
-    %myconfig
-]
-{xcookybooky}
-
-\definecolor{mygreen}{rgb}{0,.5,0}
-\DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
-
-\setRecipeColors
-{%
-    recipename = mygreen,
-    ing = blue,
-    inghead = blue,
-    prep,
-    prephead,
-    hint,
-    hinthead,
-}
-
-\setcounter{secnumdepth}{1}
-\renewcommand*{\recipesection}[2][]
-{%
-     \subsection[#1]{#2}
-}
-\renewcommand{\subsectionmark}[1]
-{% no implementation to display the section name instead
-}
-
-
-%%%%%%%%%%
-% hyperref
-\usepackage{hyperref}    % must be the last package
-\hypersetup{%
-    pdfauthor            = {Tobias Groß},
-    pdftitle             = {Trangia Kochbuch},
-    pdfsubject           = {Kochbuch},
-    pdfkeywords          = {Kochbuch},
-    pdfstartview         = {FitV},             
-    pdfview              = {FitH},
-    pdfpagemode          = {UseNone}, % Options; UseNone, UseOutlines
-    bookmarksopen        = {true},
-    pdfpagetransition    = {Glitter},
-    colorlinks           = {true},
-    linkcolor            = {black}, 
-    urlcolor             = {black}
-    citecolor            = {black}, 
-    filecolor            = {black},
-}
-% hyperref
-%%%%%%%%%%
-
-
-
+\input{include/header}
 \begin{document}
 
-\title{Kochbuch für Trangiakocher}
-\author{Tobias Groß}
+\title{Kochbuch fÃ¼r Trangiakocher}
+\author{Tobias GroÃŸ}
 \maketitle
 
 \tableofcontents
@@ -78,64 +10,6 @@ a4paper,
 \vspace{9em}
 
 \section{Recipes}
-
 \newpage
-
-% background graphic
-%\setBackgroundPicture[x, y=-2cm, width=\paperwidth-4cm, height, orientation = pagecenter]
-%{pic/background}
-
-\begin{recipe}
-[ % 
-    preparationtime = {\unit[15]{Minuten}},
-		bakingtime = {\unit[1]{Stunde}},
-    bakingtemperature,
-    portion = {\portion{2}},
-    calory,
-    source = Internet
-]
-{Brot}
-    
-    \graph
-		{% pictures
-		small,
-		big
-		}
-																		
-		\ingredients
-    {%
-				\unit[250]{g} 	& Mehl\\
-				\unit[1]{Prise}	& Salz\\
-				\unit[150]{ml}	& lauwarmes Wasser\\
-				\unit[$\frac{1}{2}$]{Pack}	& Trockenhefe\\
-        \unit[1]{TL} & Zucker\\
-				\\
-				\multicolumn{2}{l}{\textbf{Utensilien}} \\
-				\\
-				1 & großen Topf (\unit[1.75]{l})\\ 
-				1 & Trangiapfanne\\
-				6 & Teelichter
-    }
-    
-    \preparation
-    {%
-				\step \unit[250]{g} Mehl und \unit[1]{Prise} Salz auf einen Teller geben.
-				\step \unit[$\frac{1}{2}$]{Pack} Trockenhefe und \unit[1]{TL} Zucker in \unit[150]{ml} lauwarmes Wasser geben und warten, bis die Hefe aktiv wird (Bläschenbildung).
-				\step In kleinen Schritten die Hefe zu dem Mehl geben und verkneten.
-				\step Großen Trangiatopf mit Backpapier auskleiden.
-				\step Teig in den Topf geben und leicht flachdrücken. Pfanne als Deckel verwenden und 10 bis 15 Minuten gehen lassen.
-				\step \unit[6]{Teelichter} im Kreis auf den Mittelboden des Sturmkochers stellen und anzünden. Den Topf darauf stellen.
-				\step Nach \unit[35]{Minuten} das Brot wenden.
-				\step Nach weiteren \unit[25]{Minuten} das Brot aus dem Topf holen.
-    }
-    
-    \hint
-    {%
-        Damit der Hefeteig auch im Freien bei etwas niedrigeren Temperaturen geht, einfach mittig unter den Sturmkocher ein brennendes Teelicht stellen und den Teig im Topf über dem Teelicht gehen lassen.
-    }
-
-\end{recipe}
-
-\newpage % if you separate your recipes into single files this command is not necessary
-
+\input{recipes/brot}
 \end{document} 

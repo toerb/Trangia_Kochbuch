@@ -1,0 +1,63 @@
+\documentclass[%
+a4paper,
+%twoside,
+11pt
+]{article}
+
+% encoding, font, language
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[ngerman, english]{babel}
+
+%\usepackage{nicefrac}
+
+\usepackage[
+    %handwritten,
+    nowarnings,
+    %myconfig
+]
+{xcookybooky}
+
+\definecolor{mygreen}{rgb}{0,.5,0}
+\DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
+
+\setRecipeColors
+{%
+    recipename = mygreen,
+    ing = blue,
+    inghead = blue,
+    prep,
+    prephead,
+    hint,
+    hinthead,
+}
+
+\setcounter{secnumdepth}{1}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+%%%%%%%%%%
+% hyperref
+\usepackage{hyperref}    % must be the last package
+\hypersetup{%
+    pdfauthor            = {Tobias Groß},
+    pdftitle             = {Trangia Kochbuch},
+    pdfsubject           = {Kochbuch},
+    pdfkeywords          = {Kochbuch},
+    pdfstartview         = {FitV},             
+    pdfview              = {FitH},
+    pdfpagemode          = {UseNone}, % Options; UseNone, UseOutlines
+    bookmarksopen        = {true},
+    pdfpagetransition    = {Glitter},
+    colorlinks           = {true},
+    linkcolor            = {black}, 
+    urlcolor             = {black}
+    citecolor            = {black}, 
+    filecolor            = {black},
+}
+% hyperref
+%%%%%%%%%%
+
+

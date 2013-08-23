@@ -5,7 +5,7 @@ OUTPUT_DIR    = output
 all: outputdir report cleanup
 
 # Remove output directory.
-clean:
+clean: cleanup
 	rm -rf $(OUTPUT_DIR)
 
 # cleanup tempfiles
