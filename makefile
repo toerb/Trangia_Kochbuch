@@ -10,7 +10,7 @@ clean: cleanup
 
 # cleanup tempfiles
 cleanup:
-	rm -f $(DOCUMENT_NAME).aux $(DOCUMENT_NAME).out $(DOCUMENT_NAME).toc $(DOCUMENT_NAME).pdf $(DOCUMENT_NAME).log
+	rm -f $(DOCUMENT_NAME).aux $(DOCUMENT_NAME).out $(DOCUMENT_NAME).toc $(DOCUMENT_NAME).pdf $(DOCUMENT_NAME).log recipes/*.aux
 
 # Create LaTeX output directory.
 outputdir:
